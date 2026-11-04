@@ -1,5 +1,12 @@
 # MaleForm: Global Anthropometric & Self-Confidence Decision Support System
 
+## Project & Student Details
+- **Student Name(s):** Christian V. Buzarang and Ericka Fatima Reign R. Ligaray
+- **Course & Year:** Bachelor of Science in Computer Science - 3rd year
+- **Section:** F2
+- **Subject:** CS345 - Intelligent Systems 1
+
+
 **MaleForm** is an interactive C# Windows Forms application that combines a custom multi-layer perceptron neural network (built with backpropagation) with a global anthropometric dataset (`penis size by country.csv`). Designed with a philosophy rooted in data literacy, body neutrality, and healthy self-confidence, the application bridges rigorous machine learning with an empowering user experience.
 
 ---
