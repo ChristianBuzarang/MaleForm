@@ -41,15 +41,39 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridViewProgress = new System.Windows.Forms.DataGridView();
+            this.btnSaveLog = new System.Windows.Forms.Button();
+            this.txtLogGirth = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtLogLength = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtLogDate = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.rtbWellness = new System.Windows.Forms.RichTextBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.txtLearningRate = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtHiddenNode = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtEpochs = new System.Windows.Forms.TextBox();
+            this.btnRunTuning = new System.Windows.Forms.Button();
+            this.rtbTuningResults = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProgress)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLoadCsv
             // 
+            this.btnLoadCsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadCsv.Location = new System.Drawing.Point(646, 177);
             this.btnLoadCsv.Name = "btnLoadCsv";
             this.btnLoadCsv.Size = new System.Drawing.Size(107, 59);
@@ -60,6 +84,7 @@
             // 
             // btnTrainNN
             // 
+            this.btnTrainNN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrainNN.Location = new System.Drawing.Point(646, 260);
             this.btnTrainNN.Name = "btnTrainNN";
             this.btnTrainNN.Size = new System.Drawing.Size(107, 59);
@@ -70,6 +95,7 @@
             // 
             // btnEvaluateUser
             // 
+            this.btnEvaluateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEvaluateUser.Location = new System.Drawing.Point(646, 340);
             this.btnEvaluateUser.Name = "btnEvaluateUser";
             this.btnEvaluateUser.Size = new System.Drawing.Size(107, 59);
@@ -108,20 +134,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(643, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 17);
+            this.label1.Size = new System.Drawing.Size(140, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "Erect Length (CM)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(643, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 17);
+            this.label2.Size = new System.Drawing.Size(126, 17);
             this.label2.TabIndex = 7;
             this.label2.Text = "Erect Girth (CM)";
             // 
@@ -131,8 +157,9 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -180,6 +207,14 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dataGridViewProgress);
+            this.tabPage3.Controls.Add(this.btnSaveLog);
+            this.tabPage3.Controls.Add(this.txtLogGirth);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.txtLogLength);
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.txtLogDate);
+            this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -188,8 +223,89 @@
             this.tabPage3.Text = "Progress & Tracker";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // dataGridViewProgress
+            // 
+            this.dataGridViewProgress.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dataGridViewProgress.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProgress.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewProgress.Location = new System.Drawing.Point(3, 109);
+            this.dataGridViewProgress.Name = "dataGridViewProgress";
+            this.dataGridViewProgress.Size = new System.Drawing.Size(786, 309);
+            this.dataGridViewProgress.TabIndex = 7;
+            // 
+            // btnSaveLog
+            // 
+            this.btnSaveLog.Location = new System.Drawing.Point(602, 28);
+            this.btnSaveLog.Name = "btnSaveLog";
+            this.btnSaveLog.Size = new System.Drawing.Size(131, 55);
+            this.btnSaveLog.TabIndex = 6;
+            this.btnSaveLog.Text = "Save Progress Entry";
+            this.btnSaveLog.UseVisualStyleBackColor = true;
+            this.btnSaveLog.Click += new System.EventHandler(this.btnSaveLog_Click);
+            // 
+            // txtLogGirth
+            // 
+            this.txtLogGirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogGirth.Location = new System.Drawing.Point(397, 60);
+            this.txtLogGirth.Name = "txtLogGirth";
+            this.txtLogGirth.Size = new System.Drawing.Size(143, 23);
+            this.txtLogGirth.TabIndex = 5;
+            this.txtLogGirth.Text = "0";
+            this.txtLogGirth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(393, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(146, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Girth Measurement";
+            // 
+            // txtLogLength
+            // 
+            this.txtLogLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogLength.Location = new System.Drawing.Point(193, 60);
+            this.txtLogLength.Name = "txtLogLength";
+            this.txtLogLength.Size = new System.Drawing.Size(157, 23);
+            this.txtLogLength.TabIndex = 3;
+            this.txtLogLength.Text = "0";
+            this.txtLogLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(190, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(160, 17);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Length Measurement";
+            // 
+            // txtLogDate
+            // 
+            this.txtLogDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogDate.Location = new System.Drawing.Point(38, 60);
+            this.txtLogDate.Name = "txtLogDate";
+            this.txtLogDate.Size = new System.Drawing.Size(110, 23);
+            this.txtLogDate.TabIndex = 1;
+            this.txtLogDate.Text = "11/03/2026";
+            this.txtLogDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(67, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Date";
+            // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.rtbWellness);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -197,6 +313,116 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Mindset & Wellness";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // rtbWellness
+            // 
+            this.rtbWellness.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbWellness.Location = new System.Drawing.Point(3, 3);
+            this.rtbWellness.Name = "rtbWellness";
+            this.rtbWellness.ReadOnly = true;
+            this.rtbWellness.Size = new System.Drawing.Size(786, 415);
+            this.rtbWellness.TabIndex = 0;
+            this.rtbWellness.Text = "";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.rtbTuningResults);
+            this.tabPage5.Controls.Add(this.btnRunTuning);
+            this.tabPage5.Controls.Add(this.label9);
+            this.tabPage5.Controls.Add(this.txtEpochs);
+            this.tabPage5.Controls.Add(this.label8);
+            this.tabPage5.Controls.Add(this.txtHiddenNode);
+            this.tabPage5.Controls.Add(this.label7);
+            this.tabPage5.Controls.Add(this.label6);
+            this.tabPage5.Controls.Add(this.txtLearningRate);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(792, 421);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Model Tuning & Testing";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // txtLearningRate
+            // 
+            this.txtLearningRate.Location = new System.Drawing.Point(625, 41);
+            this.txtLearningRate.Name = "txtLearningRate";
+            this.txtLearningRate.Size = new System.Drawing.Size(100, 23);
+            this.txtLearningRate.TabIndex = 0;
+            this.txtLearningRate.Text = "0.5";
+            this.txtLearningRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(622, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 17);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Learning Rate";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(305, 73);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 17);
+            this.label7.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(623, 107);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(110, 17);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Hidden Nodes";
+            // 
+            // txtHiddenNode
+            // 
+            this.txtHiddenNode.Location = new System.Drawing.Point(626, 127);
+            this.txtHiddenNode.Name = "txtHiddenNode";
+            this.txtHiddenNode.Size = new System.Drawing.Size(100, 23);
+            this.txtHiddenNode.TabIndex = 3;
+            this.txtHiddenNode.Text = "8";
+            this.txtHiddenNode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(649, 197);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 17);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Epochs";
+            // 
+            // txtEpochs
+            // 
+            this.txtEpochs.Location = new System.Drawing.Point(627, 217);
+            this.txtEpochs.Name = "txtEpochs";
+            this.txtEpochs.Size = new System.Drawing.Size(100, 23);
+            this.txtEpochs.TabIndex = 5;
+            this.txtEpochs.Text = "2000";
+            this.txtEpochs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnRunTuning
+            // 
+            this.btnRunTuning.Location = new System.Drawing.Point(607, 297);
+            this.btnRunTuning.Name = "btnRunTuning";
+            this.btnRunTuning.Size = new System.Drawing.Size(139, 67);
+            this.btnRunTuning.TabIndex = 7;
+            this.btnRunTuning.Text = "Run Hyperparameter Experiment";
+            this.btnRunTuning.UseVisualStyleBackColor = true;
+            this.btnRunTuning.Click += new System.EventHandler(this.btnRunTuning_Click);
+            // 
+            // rtbTuningResults
+            // 
+            this.rtbTuningResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbTuningResults.Location = new System.Drawing.Point(19, 21);
+            this.rtbTuningResults.Name = "rtbTuningResults";
+            this.rtbTuningResults.Size = new System.Drawing.Size(557, 373);
+            this.rtbTuningResults.TabIndex = 8;
+            this.rtbTuningResults.Text = "";
             // 
             // Form1
             // 
@@ -212,6 +438,12 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProgress)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -232,6 +464,25 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtLogDate;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtLogGirth;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtLogLength;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnSaveLog;
+        private System.Windows.Forms.DataGridView dataGridViewProgress;
+        private System.Windows.Forms.RichTextBox rtbWellness;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtLearningRate;
+        private System.Windows.Forms.Button btnRunTuning;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtEpochs;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtHiddenNode;
+        private System.Windows.Forms.RichTextBox rtbTuningResults;
     }
 }
 
