@@ -11,6 +11,20 @@
 
 ---
 
+## Dataset Overview & Statistics
+
+The application utilizes a peer-reviewed global anthropometric dataset comprising **146 countries and regions** with zero missing values. 
+
+* **Total Records:** 146 country entries spanning Europe, Africa, Asia, Americas, and Australia.
+* **Core Features Used:** Erect Length (cm), Erect Girth (cm), and calculated Volume ($\pi r^2 L$).
+* **Dataset Statistical Summary:**
+  * **Erect Length:** Mean = 13.92 cm (Min: 9.43 cm, Max: 17.95 cm).
+  * **Erect Girth:** Mean = 11.84 cm (Min: 10.25 cm, Max: 13.63 cm).
+  * **Physiological Volume:** Mean = 157.08 $\text{cm}^3$ (Min: 88.00 $\text{cm}^3$, Max: 252.80 $\text{cm}^3$).
+  * **Sample Size ($N$):** Combined global study cohort exceeding 96,000 total participants across clinical measurements and self-reported surveys.
+
+---
+
 ## Key Features & System Architecture
 
 ### 1. Global Metric Explorer (Tab 1)
@@ -67,3 +81,6 @@
 * **Source Code:** Well-structured C# Windows Forms application (`Form1.cs`, `DataLoader.cs`, `CountryData.cs`).
 * **Training Output Logs:** `MaleForm_Training_Loss.csv` and `Tuning_Log_*.txt` (tracking MSE loss convergence across epochs and hyperparameter variations).
 * **Data Description:** Utilizes peer-reviewed global anthropometric metrics across 146 countries to promote statistical literacy and body confidence.
+
+## Reference
+**Little-Big-Data (richard512):** https://github.com/richard512/Little-Big-Data/blob/master/penis%20size%20by%20country.csv
