@@ -82,5 +82,17 @@ The application utilizes a peer-reviewed global anthropometric dataset comprisin
 * **Training Output Logs:** `MaleForm_Training_Loss.csv` and `Tuning_Log_*.txt` (tracking MSE loss convergence across epochs and hyperparameter variations).
 * **Data Description:** Utilizes peer-reviewed global anthropometric metrics across 146 countries to promote statistical literacy and body confidence.
 
-## Reference
-**Little-Big-Data (richard512):** https://github.com/richard512/Little-Big-Data/blob/master/penis%20size%20by%20country.csv
+## Data Description
+This dataset compiles average male anatomical measurements from various countries and regions using data from medical studies and online surveys.
+
+* **Geography:** Country and continent names.
+* **Measurements:** Flaccid and erect length and circumference (in centimeters and inches).
+* **Calculated Volume:** Estimated volume in cubic centimeters ($\text{cm}^3$) based on a cylinder shape.
+* **Collection Method:** Indicates whether measurements were medically taken ("Measured") or self-reported.
+* **Sample Size & Primary Source:** The number of participants ($N$) and the credited study, journal, or website (e.g., *Journal of Urology*, *African Journal of Urology*, SurveyMonkey, or institutional studies).
+
+---
+
+### Dataset Origin & Sources
+* **Reference:** The dataset is based on [richard512/Little-Big-Data](https://github.com/richard512/Little-Big-Data/blob/master/penis%20size%20by%20country.csv)
+* **Underlying Scientific & Survey Sources:** The dataset aggregates entries from individual peer-reviewed journals (such as the *Journal of Urology*), academic literature (e.g., Lynn et al., 2012; Siminoski et al., 1993), regional medical university studies, and online platforms.
