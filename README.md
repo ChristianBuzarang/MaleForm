@@ -7,7 +7,7 @@
 - **Subject:** CS345 - Intelligent Systems 1
 
 
-**MaleForm** is an interactive C# Windows Forms application that combines a custom multi-layer perceptron neural network (built with backpropagation) with a global anthropometric dataset (`penis size by country.csv`). Designed with a philosophy rooted in data literacy, body neutrality, and healthy self-confidence, the application bridges rigorous machine learning with an empowering user experience.
+**MaleForm** is an interactive C# Windows Forms application that combines a custom multi-layer perceptron neural network (built with backpropagation) with a global anthropometric dataset (`penis size by country.csv`). It is designed with a philosophy rooted in data literacy, body neutrality, and healthy self-confidence, the application bridges rigorous machine learning with an empowering user experience.
 
 ---
 
@@ -41,7 +41,7 @@
 ## Technical & Rubric Compliance
 
 * **Data Preprocessing (20 pts):** Implements robust CSV parsing, feature extraction, Min-Max normalization into a $[0, 1]$ scale, and an 80/20 train-test data split.
-* **Functional Correctness & Backpropagation (35 pts):** Powered by an active C# backpropagation neural network engine handling forward passes, error calculations, and weight updates.
+* **Functional Correctness & Backpropagation (35 pts):** Powered by a C# backpropagation neural network engine handling forward passes, error calculations, and weight updates.
 * **Hyperparameter Tuning & Logging (15 pts):** Tracks training epochs and automatically exports real-time MSE training loss CSV logs alongside systematic tuning text logs.
 * **Evaluation & Decision Support (15 pts):** Integrates quantitative neural predictions with an intuitive decision support system user interface.
 
@@ -55,8 +55,8 @@
 * The dataset file: `penis size by country.csv`.
 
 ### Running the Application
-1. Clone or download the repository to your local machine.
-2. Open the solution file (`.sln`) in Visual Studio.
+1. Clone or download the repository to your local desktop.
+2. Open the solution file (`.slnx`) in Visual Studio.
 3. Ensure `penis size by country.csv` is placed in your project directory (or output folder).
 4. Build and run the project (`F5`).
 5. Navigate through the tabs to explore dataset records, train the neural model, test hyperparameter configurations, and review wellness guidance!
